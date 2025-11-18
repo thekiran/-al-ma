@@ -1,402 +1,476 @@
-Tamam, **en basit şekilde** anlatıyorum. Çok kısa, çok anlaşılır ve örnekli. 👇
+Aynı menüde gördüğün sıraya göre, sıfırdan çalışabileceğin **HTML mini ders defteri** hazırlıyorum.
+Her başlıkta:
+
+* Kısa açıklama
+* Küçük örnek kod
+* “Mini görev” (kendin denemen için)
+
+İstersen bunu dosyaya da dönüştürüp tek HTML sayfası olarak yazabiliriz.
 
 ---
 
-# ⭐ HTML’de tablo nasıl yapılır? (Basit Anlatım)
+## 1. HTML HOME / HTML Introduction
 
-HTML’de tablo yapmak için 3 şey bilmen yeterli:
+**HTML ne?**
+Web sayfalarının iskeletini oluşturan işaretleme dilidir. Tarayıcı, yazdığın etiketleri (tag) okuyup ekrana çevirir.
 
-### 1️⃣ `<table>` → Tabloyu başlatır
-
-### 2️⃣ `<tr>` → Satır oluşturur
-
-### 3️⃣ `<td>` → Hücre (kutucuk) oluşturur
-
-Hepsi bu kadar!
-
----
-
-# ⭐ En basit tablo örneği
-
-### Kod:
+En temel yapı:
 
 ```html
-<table border="1">
-    <tr>
-        <td>Ali</td>
-        <td>20</td>
-    </tr>
-</table>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>İlk Sayfam</title>
+</head>
+<body>
+    Merhaba dünya!
+</body>
+</html>
 ```
 
-### Çıktı:
-
-| Ali | 20 |
+**Mini görev:**
+`ilk.html` diye dosya aç, yukarıdaki kodu yapıştır, tarayıcıda aç.
 
 ---
 
-# ⭐ Biraz daha büyük tablo
+## 2. HTML Editors
 
-### Kod:
+Notepad, Notepad++, VS Code, Sublime… Hepsiyle HTML yazabilirsin. En rahatı: **VS Code**.
+
+Dikkat etmen gerekenler:
+
+* Dosya uzantısı: **`.html`**
+* Kod içinde Türkçe karakter için: `<meta charset="UTF-8">`
+
+**Mini görev:**
+VS Code’da `index.html` dosyası oluştur ve temel yapıyı yaz.
+
+---
+
+## 3. HTML Basic
+
+Temel etiketler:
+
+* `<h1>…</h1>` : başlık
+* `<p>…</p>` : paragraf
+* `<br>` : satır sonu
+* `<a>` : link
+* `<img>` : resim
+
+Örnek:
 
 ```html
-<table border="1">
-    <tr>
-        <td>Ad</td>
-        <td>Yaş</td>
-    </tr>
-
-    <tr>
-        <td>Ali</td>
-        <td>20</td>
-    </tr>
-
-    <tr>
-        <td>Ayşe</td>
-        <td>19</td>
-    </tr>
-</table>
+<body>
+    <h1>Benim Web Sitem</h1>
+    <p>Bu benim ilk paragrafım.</p>
+    <p>Bu da ikinci paragraf.<br>Burada satır atladım.</p>
+</body>
 ```
 
-### Çıktı:
-
-| Ad   | Yaş |
-| ---- | --- |
-| Ali  | 20  |
-| Ayşe | 19  |
+**Mini görev:**
+Başlık + iki paragraf içeren basit bir sayfa yaz.
 
 ---
 
-# ⭐ Başlık eklemek istersen `<th>`
+## 4. HTML Elements (Elemanlar)
 
-### Kod:
+**Element** = Açılış etiketi + içerik + kapanış etiketi
 
 ```html
-<table border="1">
-    <tr>
-        <th>Ad</th>
-        <th>Yaş</th>
-    </tr>
-
-    <tr>
-        <td>Ali</td>
-        <td>20</td>
-    </tr>
-</table>
+<p>Bu bir paragraf elemanıdır.</p>
 ```
 
-### Çıktı:
-
-| **Ad** | **Yaş** |
-| ------ | ------- |
-| Ali    | 20      |
-
----
-
-# ⭐ Özet (kısacık)
-
-* `<table>` = tablo
-* `<tr>` = satır
-* `<td>` = hücre
-* `<th>` = başlık hücresi
-
-Tamam! Sana **hiç HTML bilmeyen biri için**, **kolaydan zora doğru** tablo anlatacağım.
-Her adım bir öncekinden biraz daha zor olacak.
-Her adımda **kod + çıktı** da olacak.
-
-Hazırsan başlıyoruz. 👇
-
----
-
-# 🟢 **1. Adım — Tablo nedir? (En temel anlatım)**
-
-Tablo, kutucuklardan oluşan bir yapıdır.
-
-HTML’de tablo yapmak için 3 komut bilmen yeterli:
-
-* `<table>` → tabloyu açar
-* `<tr>` → bir satır oluşturur
-* `<td>` → satır içindeki hücre (kutucuk)
-
----
-
-# 🟢 **2. Adım — İlk tabelon (en basit)**
-
-### Kod:
+İç içe elemanlar:
 
 ```html
-<table border="1">
-    <tr>
-        <td>Ali</td>
-        <td>20</td>
-    </tr>
-</table>
+<p>Bu yazıda <b>kalın</b> bir kelime var.</p>
 ```
 
-### Çıktı:
-
-| Ali | 20 |
-
-Bu kadar! 1 satır + 2 hücreli küçük bir tablo.
+**Mini görev:**
+Bir paragraf içinde hem kalın (`<b>`), hem italik (`<i>`) kelimeler kullan.
 
 ---
 
-# 🟢 **3. Adım — 2 satırlı tablo**
+## 5. HTML Attributes (Öznitelikler)
 
-### Kod:
+Etiketlere ekstra bilgi ekler.
+
+* `href` → link adresi
+* `src` → resim yolu
+* `alt` → resim açıklaması
+* `id`, `class` → CSS için isimler
+* `style` → satır içi stil
+
+Örnek:
 
 ```html
-<table border="1">
-    <tr>
-        <td>Ad</td>
-        <td>Yaş</td>
-    </tr>
-
-    <tr>
-        <td>Ali</td>
-        <td>20</td>
-    </tr>
-</table>
+<a href="https://www.google.com">Google'a git</a>
+<img src="resim.jpg" alt="Profil fotoğrafım">
+<p id="ilk-paragraf" class="kirmizi">Merhaba!</p>
 ```
 
-### Çıktı:
-
-| Ad  | Yaş |
-| --- | --- |
-| Ali | 20  |
+**Mini görev:**
+Kendini tanıtan bir paragraf yaz ve `id="ben"` ver.
 
 ---
 
-# 🟡 **4. Adım — 3 satırlı tablo**
-
-### Kod:
+## 6. HTML Headings (Başlıklar)
 
 ```html
-<table border="1">
-    <tr>
-        <td>Ad</td>
-        <td>Yaş</td>
-    </tr>
-
-    <tr>
-        <td>Ali</td>
-        <td>20</td>
-    </tr>
-
-    <tr>
-        <td>Ayşe</td>
-        <td>19</td>
-    </tr>
-</table>
+<h1>En büyük başlık</h1>
+<h2>Biraz daha küçük</h2>
+<h3>...</h3>
+<h4>...</h4>
+<h5>...</h5>
+<h6>En küçük başlık</h6>
 ```
 
-### Çıktı:
+Tarayıcı büyükten küçüğe doğru gösterir ve SEO açısından da önemlidir.
 
-| Ad   | Yaş |
-| ---- | --- |
-| Ali  | 20  |
-| Ayşe | 19  |
+**Mini görev:**
+Bir konu seç (örneğin “Oyunlar”)
+
+* Sayfa başlığı: `<h1>`
+* Alt başlıklar: `<h2>` (FPS Oyunları, Hikaye Oyunları gibi)
 
 ---
 
-# 🟡 **5. Adım — Başlık eklemek (th kullanımı)**
-
-Tablonun başlığını `<th>` ile yaparsın (kalın görünür).
-
-### Kod:
+## 7. HTML Paragraphs (Paragraflar)
 
 ```html
-<table border="1">
-    <tr>
-        <th>Ad</th>
-        <th>Yaş</th>
-    </tr>
-
-    <tr>
-        <td>Ali</td>
-        <td>20</td>
-    </tr>
-</table>
+<p>Bu bir paragraf.</p>
+<p>Bu da ikinci paragraf.</p>
 ```
 
-### Çıktı:
-
-| **Ad** | **Yaş** |
-| ------ | ------- |
-| Ali    | 20      |
-
----
-
-# 🟡 **6. Adım — Tüm tabloya başlık eklemek (caption)**
-
-### Kod:
+Satır atlamak için:
 
 ```html
-<table border="1">
-    <caption>Öğrenci Listesi</caption>
-
-    <tr>
-        <th>Ad</th>
-        <th>Yaş</th>
-    </tr>
-
-    <tr>
-        <td>Ali</td>
-        <td>20</td>
-    </tr>
-</table>
+Satır 1<br>
+Satır 2
 ```
 
-### Çıktı:
-
-Öğrenci Listesi
-
-| Ad  | Yaş |
-| --- | --- |
-| Ali | 20  |
+**Mini görev:**
+Sevdiğin bir oyunu anlatan 3 paragraf yaz.
 
 ---
 
-# 🔵 **7. Adım — Hücreleri birleştirmek (colspan)**
+## 8. HTML Styles (Stiller) – style attribute
 
-Bir hücrenin **yan yana iki sütunu kaplamasını** istiyorsan:
-
-### Kod:
+Satır içi stil:
 
 ```html
-<table border="1">
-    <tr>
-        <th colspan="2">Bilgi</th>
-    </tr>
-
-    <tr>
-        <td>Ad</td>
-        <td>Ali</td>
-    </tr>
-</table>
+<p style="color:red; font-size:20px;">Kırmızı yazı</p>
+<p style="text-align:center;">Ortalanmış yazı</p>
 ```
 
-### Çıktı:
+**Mini görev:**
+Biri kırmızı, biri mavi, biri büyük fontlu 3 farklı paragraf yaz.
 
-| **Bilgi (2 sütunu kaplar)** |     |
-| --------------------------- | --- |
-| Ad                          | Ali |
+> Not: Gerçekte stilleri CSS dosyasında toplamak daha doğrudur, aşağıda CSS kısmında gelecek.
 
 ---
 
-# 🔵 **8. Adım — Satır birleştirme (rowspan)**
+## 9. HTML Formatting (Biçimlendirme)
 
-Bir hücre **aşağı doğru 2 satırı kaplasın** istersen:
+Sık kullanılanlar:
 
-### Kod:
+```html
+<b>kalın</b>
+<strong>önemli kalın</strong>
+<i>italik</i>
+<em>vurgulu italik</em>
+<u>altı çizili</u>
+<small>küçük yazı</small>
+<sub>alt simge</sub>  (H<sub>2</sub>O)
+<sup>üst simge</sup>  (x<sup>2</sup>)
+```
+
+**Mini görev:**
+`x^2 + 3x + 5` ifadesini HTML ile düzgün göster.
+
+---
+
+## 10. HTML Quotations (Alıntılar)
+
+```html
+<p>Albert Einstein dedi ki:</p>
+<blockquote>
+    Hayal gücü bilgiden daha önemlidir.
+</blockquote>
+
+<p>O "ben geliyorum" dedi.</p>
+<q>Bu kısa bir alıntı.</q>
+```
+
+**Mini görev:**
+Sevdiğin bir sözü `<blockquote>` içinde yaz.
+
+---
+
+## 11. HTML Comments (Yorumlar)
+
+Tarayıcıda görünmez, sadece kod içinde not:
+
+```html
+<!-- Bu bir yorum satırıdır -->
+<p>Bu görünür.</p>
+```
+
+**Mini görev:**
+Sayfana kendi adınla ilgili bir yorum ekle (`<!-- Burayı Kiran yazdı -->` gibi).
+
+---
+
+## 12. HTML Colors (Renkler)
+
+Renk verme şekilleri:
+
+```html
+<p style="color: red;">İsim ile</p>
+<p style="color: #00ff00;">Hex ile</p>
+<p style="color: rgb(0, 0, 255);">RGB ile</p>
+<p style="background-color: yellow;">Arka plan rengi</p>
+```
+
+**Mini görev:**
+Arka planı açık gri, yazıyı lacivert yap.
+
+---
+
+## 13. HTML CSS
+
+CSS, stilleri ayrı bir yerde yönetmek için kullanılır.
+
+### a) Dahili CSS (internal)
+
+```html
+<head>
+<style>
+    body { background-color: #f0f0f0; }
+    h1 { color: darkblue; }
+    p  { color: #333333; }
+</style>
+</head>
+```
+
+### b) Harici CSS (external)
+
+`style.css` dosyası:
+
+```css
+body {
+    background-color: #f0f0f0;
+}
+h1 {
+    color: darkblue;
+}
+```
+
+HTML:
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+**Mini görev:**
+`style.css` oluştur, body arka planını farklı bir renk yap.
+
+---
+
+## 14. HTML Links (Bağlantılar)
+
+```html
+<a href="https://www.youtube.com" target="_blank">YouTube</a>
+```
+
+* `target="_blank"` → yeni sekmede aç
+
+Sayfa içi link:
+
+```html
+<a href="#alt-kisim">Alta git</a>
+
+...
+
+<h2 id="alt-kisim">Sayfanın alt kısmı</h2>
+```
+
+**Mini görev:**
+Bir sayfanda 3 farklı siteye link ekle.
+
+---
+
+## 15. HTML Images (Resimler)
+
+```html
+<img src="resim.jpg" alt="Açıklama" width="300" height="200">
+```
+
+* `alt` → resim yüklenmezse görülen metin
+* Genişlik, yükseklik px olarak verilebilir.
+
+**Mini görev:**
+Masaüstünden bir resim dosyasını proje klasörüne kopyala ve sayfada göster.
+
+---
+
+## 16. HTML Favicon
+
+Sekme yanında görünen küçük ikon.
+
+```html
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+```
+
+**Mini görev:**
+Herhangi bir 32x32 png’yi bul, online favicon dönüştürücüsü ile `.ico` yap, projene koy.
+
+---
+
+## 17. HTML Page Title (Sayfa Başlığı)
+
+Tarayıcı sekmesinde görünen isim:
+
+```html
+<head>
+    <title>Kiran'ın İlk Sitesi</title>
+</head>
+```
+
+**Mini görev:**
+Her farklı sayfana mantıklı bir `title` ver (Ana Sayfa, Hakkımda, İletişim gibi).
+
+---
+
+## 18. HTML Tables (Tablolar)
+
+Temel yapı:
 
 ```html
 <table border="1">
     <tr>
-        <td rowspan="2">Çarşamba</td>
+        <th>Ders</th>
+        <th>Gün</th>
+        <th>Saat</th>
+    </tr>
+    <tr>
+        <td>Matematik</td>
+        <td>Pazartesi</td>
         <td>10:00</td>
     </tr>
-    <tr>
-        <td>11:00</td>
-    </tr>
 </table>
 ```
 
-### Çıktı:
+* `<table>` : tablo
+* `<tr>` : satır
+* `<th>` : başlık hücresi (kalın, ortalı)
+* `<td>` : normal hücre
 
-| Çarşamba | 10:00 |
-|          | 11:00 |
+**colspan / rowspan:**
+
+```html
+<td colspan="2">2 sütunu birleştir</td>
+<td rowspan="3">3 satırı birleştir</td>
+```
+
+**Mini görev:**
+Kendi haftalık ders programını tablo ile yap.
 
 ---
 
-# 🔵 **9. Adım — Daha güzel tablo yapmak (CSS ile)**
+## 19. HTML Lists (Listeler)
 
-### Kod:
+### Sırasız liste (noktalı) – `<ul>`
+
+```html
+<ul>
+    <li>Elma</li>
+    <li>Armut</li>
+    <li>Muz</li>
+</ul>
+```
+
+### Sıralı liste (numaralı) – `<ol>`
+
+```html
+<ol>
+    <li>Adım 1</li>
+    <li>Adım 2</li>
+</ol>
+```
+
+**Mini görev:**
+Favori oyunlarını bir `<ul>`, yapılacak işlerini bir `<ol>` ile yaz.
+
+---
+
+## 20. HTML Block & Inline
+
+**Block elemanlar**: satırın tamamını kaplar, alt satıra geçer.
+Örnek: `<div>`, `<p>`, `<h1>`, `<ul>`, `<table>`
+
+**Inline elemanlar**: Sadece içeriği kadar yer kaplar, satırı bölmez.
+Örnek: `<span>`, `<a>`, `<img>`, `<b>`, `<i>`
+
+Örnek:
+
+```html
+<p>Bu bir block elemandır.</p>
+<a href="#">Bu link</a> ve <span>bu span</span> aynı satırda.
+```
+
+**Mini görev:**
+Bir paragrafın içinde birkaç kelimeyi `<span>` ile renklendir (inline stil ver).
+
+---
+
+## 21. HTML Div
+
+`<div>` = “kutu” gibi düşünebilirsin. Sayfayı bölmek için kullanılır (header, sidebar, content vs.).
+
+```html
+<div style="background-color: lightgray; padding: 10px;">
+    <h2>Başlık</h2>
+    <p>Bu kutunun içindeki yazı.</p>
+</div>
+```
+
+Genelde CSS ile beraber:
 
 ```html
 <style>
-    table {
-        border-collapse: collapse;
-        width: 40%;
-    }
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-    }
-    th {
-        background-color: #eee;
-    }
+.kutu {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    width: 300px;
+}
 </style>
 
-<table>
-    <tr>
-        <th>Ürün</th>
-        <th>Fiyat</th>
-    </tr>
-    <tr>
-        <td>Mouse</td>
-        <td>150</td>
-    </tr>
-</table>
+<div class="kutu">
+    Bu bir kutu.
+</div>
 ```
 
-### Çıktı:
-
-| Ürün  | Fiyat |
-| ----- | ----- |
-| Mouse | 150   |
-
-Daha profesyonel görünür.
+**Mini görev:**
+Üstte “Başlık” div’i, altta “İçerik” div’i olan basit bir layout yap.
 
 ---
 
-# 🔴 **10. Adım — En ileri seviye küçük tablo**
+## Hepsini Birleştiren Küçük Proje Önerisi
 
-Hem başlık, hem rowspan, hem colspan var.
+`index.html` içinde:
 
-### Kod:
+* Başlıklar (`h1`, `h2`)
+* Paragraflar
+* Liste (oyunlar, hobiler)
+* Bir resim
+* Bir tablo (ders programı)
+* Birkaç link
+* Div’lerle bölünmüş alanlar
+* Basit CSS (arka plan rengi, yazı rengi)
 
-```html
-<table border="1">
-    <caption>Ders Programı</caption>
-
-    <tr>
-        <th>Gün</th>
-        <th>Saat</th>
-        <th>Ders</th>
-    </tr>
-
-    <tr>
-        <td rowspan="2">Pazartesi</td>
-        <td>10:00</td>
-        <td>Matematik</td>
-    </tr>
-
-    <tr>
-        <td colspan="2">Etüt</td>
-    </tr>
-</table>
-```
-
-### Çıktı:
-
-| **Gün**             | **Saat**       | **Ders**  |
-| ------------------- | -------------- | --------- |
-| Pazartesi (2 satır) | 10:00          | Matematik |
-|                     | colspan (Etüt) |           |
-
----
-
-# 🎉 Tam özet:
-
-1. `<table>` → tablo
-2. `<tr>` → satır
-3. `<td>` → hücre
-4. `<th>` → başlık hücresi
-5. `colspan` → yatay birleştirme
-6. `rowspan` → dikey birleştirme
-7. `caption` → tablo başlığı
-8. CSS → tabloya tasarım
-
----
-
+İstersen bir sonraki mesajında yazdığın kodu at, birlikte düzeltelim ve güzelleştirelim.
