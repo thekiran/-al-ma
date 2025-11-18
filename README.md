@@ -1,12 +1,3 @@
-Aynı menüde gördüğün sıraya göre, sıfırdan çalışabileceğin **HTML mini ders defteri** hazırlıyorum.
-Her başlıkta:
-
-* Kısa açıklama
-* Küçük örnek kod
-* “Mini görev” (kendin denemen için)
-
-İstersen bunu dosyaya da dönüştürüp tek HTML sayfası olarak yazabiliriz.
-
 ---
 
 ## 1. HTML HOME / HTML Introduction
